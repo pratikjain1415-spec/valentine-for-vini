@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff7fb;
+      font-family: Georgia, serif;
+    }
+
+    .box {
+      text-align: center;
+      padding: 20px;
+      max-width: 320px;
+    }
+
+    h1 {
+      color: #c94b7c;
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+    }
+
+    button {
+      width: 120px;
+      padding: 12px;
+      margin: 10px;
+      font-size: 1rem;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .yes {
+      background: #c94b7c;
+      color: white;
+    }
+
+    .no {
+      background: #e0e0e0;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box" id="content">
+    <h1>Will you be my Valentine?</h1>
+    <button class="yes" onclick="sayYes()">Yes 🤍</button>
+    <button class="no" onclick="sayNo()">No</button>
+  </div>
+
+  <script>
+    function sayYes() {
+      document.getElementById("content").innerHTML =
+        "<h1>Thank you for saying yes 🤍</h1>";
+    }
+
+    function sayNo() {
+      document.getElementById("content").innerHTML =
+        "<h1>Are you sure? 🙂</h1><button class='yes' onclick='sayYes()'>Yes 🤍</button>";
+    }
+  </script>
+</body>
+</html>
 
